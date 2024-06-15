@@ -1,0 +1,371 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/Meals.css') }}">
+    <link rel="icon" type="image/x-icon" href=".\static\images\favicon.png">
+    <!-- <link rel="stylesheet" href="Trinity-main\static\css\Meals.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <title>Tiffeno_Meals</title>
+    <style>
+      .icon-bar {
+  position: fixed;
+  top: 45%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 60px; 
+}
+.icon-bar a i {
+  font-size: 30px !important; 
+}
+
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.google {
+  background: #dd4b39;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.instagram {
+  background: #bb0061f4;
+  color: white;
+}
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+.my-float{
+	margin-top:16px;
+}
+    </style>
+</head>
+<body>
+
+  <a href="https://api.whatsapp.com/send?phone=9424067977&text=Welcome to Teffino." class="float" target="_blank">
+    <i class="fa fa-whatsapp my-float"></i>
+    </a>
+
+  <div class="icon-bar">
+    <a href="https://www.facebook.com/people/teffinoexpress/61560848874552/?mibextid=ZbWKwL" class="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="https://x.com/TeffinoE5234" class="twitter"><i class="fa fa-twitter"></i></a>
+    <a href="mailto: teffinoexpress@gmail.com" class="google"><i class="fa fa-google"></i></a>
+    <a href="https://www.instagram.com/teffino_express?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="instagram"><i class="fa fa-instagram"></i></a>
+  </div>
+
+  <div class="top-bar">
+    <div class="top-bar-container">
+      <div class="logo-container">
+        <a href="./" class="site-logo">
+          <!-- <img src="{{ url_for('static', filename='images/logo-1@2x.png') }}" alt="#" height="100px" width="100px"> -->
+          <img src="{{ url_for('static', filename='images/logo-1@2x.png') }}" alt="#" height="100px" width="100px" style="margin-top: -20px;">
+
+        </a>
+      </div>
+
+      <div style="margin-top: -20px;" class="nav-container">
+        <ul class="nav-links">
+          <li><a href="./">Home</a></li>
+          <li><a href="./AboutUs">About Us</a></li>
+          <li><a href="./Meals">Meal Plans</a></li>
+          <li><a href="./Services">Services</a></li>
+          <li><a href="./Gallery">Gallery</a></li>
+          <li><a href="./ContactUs">Contact</a></li>
+        </ul>
+      </div>
+      <div class="subscribe-container">
+        <button style="margin-top: -20px;" class="subscribe-btn"> <i class="fa fa-phone" aria-hidden="true"></i>+91 9424067977</button>
+      </div>
+    </div>
+  </div>
+  <nav class="navbar">
+    <div class="nav-container">
+      <ul class="nav-links">
+        <a href="./" class="site-logos">
+          <!-- <img src="{{ url_for('static', filename='images/logo-1@2x.png') }}" alt="#" height="100px" width="100px"> -->
+          <img src="{{ url_for('static', filename='images/logo-1@2x.png') }}" alt="#" height="100px" width="100px" style="margin-top: -20px;">
+  
+        </a>
+        <li><a href="./">Home</a></li>
+        <li><a href="./AboutUs">About Us</a></li>
+        <li><a href="./Meals">Meal Plans</a></li>
+        <li><a href="./Services">Services</a></li>
+        <li><a href="./Gallery">Gallery</a></li>
+        <li><a href="./ContactUs">Contact</a></li>
+        <button style="margin-top: -20px;" class="subscribe-btn"> <i class="fa fa-phone" aria-hidden="true"></i>+91 9424067977</button>
+      </ul>
+      <div class="nav-sub subscribe-container">
+      </div>
+    </div>
+</nav>
+<section class="meals-section">
+  <img src=".\static\images\Meals-starting-photo.jpg" alt="" height="600px" width="100%" >
+  <div class="select-option">
+    <h1> Tiffin just start from ₹51/-</h2>
+      <h2>Choose Your Meal Plan</h2>
+      <div class="select-btn">
+          <button class="btn active" id="btn-1">Regular Meal</button>
+          <button class="btn" id="btn-2">Premium Meal</button>
+      </div>
+  </div>
+  <div class="spacer"></div>
+  <div class="meal-plans content active" id="content-1">
+      <img src=".\static\images\normal-meal.jpg" alt="" class="meal-img">
+      <div class="plan-detail">
+          <h1>Regular Plan</h1>
+          <table class="plan-info">
+              <tr>
+                <th>
+                        <p>Rotis</p>
+                        
+                    </th>
+                <th>
+                        <p>4 Pics</p>
+                    </th>
+              </tr>
+              <tr>
+                <th>
+                        <p>Daal</p>
+                        <p></p>
+                    </th>
+                <th>
+                        <p>150 Grams</p>
+                    </th>
+              </tr>
+                <tr>
+                <th>
+                        <p>Rice</p>
+                        <p></p>
+                    </th>
+                <th>
+                        <p>150 Grams</p>
+                    </th>
+              </tr>
+                <tr>
+                <th>
+                        <p>Seasonal Vegtables</p>
+                        <p>(Fry Aalu, Aalu Dam, Fransbeen, Soyabeen,
+                            Flower)</p>
+                    </th>
+                <th>
+                        <p>150 Grams</p>
+                    </th>
+              </tr>
+          </table>
+          <h1>Price- <span class="cut-off">₹3999</span> <span class="og-price">₹2999</span> /per month </h1>
+      </div>
+      
+      
+  </div>
+  <div class="meal-plans content" id="content-2">
+      <img src=".\static\images\rice-drumstick-and-carrot-sambar-amaranth-leaves-1@2x.png" alt="" class="meal-img">
+      <div class="plan-detail">
+          <h1><img src=".\static\images\crown.png" class="crown-img"> Premium Plan</h1>
+          <table class="plan-info">
+              <tr>
+                <th>
+                        <p>Rotis</p>
+                        <p>(Ghee Roti, Paratha Roti, Puri)</p>
+                    </th>
+                <th>
+                        <p>5 Rotis</p>
+                    </th>
+              </tr>
+              <tr>
+                <th>
+                        <p>Daal</p>
+                        <p> ( Daal Fry, Daal tadka, Dhaba style daal)</p>
+                    </th>
+                <th>
+                        <p>150 Grams</p>
+                    </th>
+              </tr>
+                <tr>
+                <th>
+                        <p>Rice</p>
+                        <p>  (Normal Rice, Jeera Rice) </p>
+                    </th>
+                <th>
+                        <p>150 Grams</p>
+                    </th>
+              </tr>
+                <tr>
+                <th>
+                        <p>Vegtables/ Curry</p>
+                        <p>(Fry Aalu, Aalu Dam, Fransbeen, Soyabeen,
+                            Flower)</p>
+                    </th>
+                <th>
+                        <p>Quantity-2</p>
+                    </th>
+              </tr>
+              <tr>
+                <th>
+                        <p>Salad/Achar/Papad</p>
+                        <p></p>
+                    </th>
+                <th>
+                        <p></p>
+                    </th>
+              </tr>
+              <tr>
+                <th>
+                        <p>Desert</p>
+                        
+                    </th>
+                <th>
+                        <p>1 per weekly</p>
+                    </th>
+              </tr>
+          </table>
+          <h1>Price- <span class="cut-off"> ₹5999</span>  <span class="og-price"> ₹3999</span>  /per month </h1>
+      </div>
+      
+      
+  </div>
+  <div class="continue">
+    <h2>To Continue with this plan, Contact Us in Whatsapp <span><a class="w-img" href="https://api.whatsapp.com/send?phone=9424067977&text=Welcome to Teffino."><img src=".\static\images\whatsapp.jpg" alt="" class="w-img"></a></span></h2>
+    <!-- <a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
+      <i class="fa fa-whatsapp my-float"></i>
+      </a> -->
+  </div>
+  <div class="daily-plan">
+    <h1>Per day tiffin just at ( ₹60 / ₹80 ) on demand</h1>
+    <h2>Roti (5-pc)</h2>
+    <h2>Rice</h2>
+    <h2>Daal</h2>
+    <h2>Seasonal Vegtables</h2>
+  </div>
+
+
+</section>
+<div class="spacer"></div>
+
+
+    </section>
+    <div class="spacer"></div>
+    
+    <footer class="footer">
+      <div class="footer-info">
+        <div class="company-info">
+          <a href="./">
+            <img src=".\static\images\logo-1@2x.png" alt="#" height="150px">
+          </a>
+         
+          <p>Teffino Express has been serving authentic Indian food and also provides you with freshly cooked healthy meals, made with love. Trust us and we won't disappoint you.</p>
+        </div>
+        <div class="useful-links">
+          <h1>Useful Links</h1>
+          <div class="links">
+            <ul class="links-1">
+              <li><a href="./">Home</a></li>
+              <li><a href="./AboutUs">About Us</a></li>
+              <li><a href="./Meals">Meal Plans</a></li>
+              <li><a href="./Services">Services</a></li>
+              <li><a href="./Gallery">Gallery</a></li>
+            </ul>
+            <ul class="links-1">
+              <li><a href="./FAQs" >FAQ</a></li>
+              <li>Privacy Policy</li>
+              <li>Terms &amp; Conditions</li>
+              <li><a href="ContactUs">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="contact-info">
+          <h1>Contact Information</h1>
+          <h2><span><img src=".\static\images\icon-2.svg" alt=""></span> teffinoexpress@gmail.com</h2>
+          <h2><span><img src=".\static\images\icon--bootstrap--filled--telephone.svg" alt=""> +91 9424067977</span></h2>
+          <h2><span><img src=".\static\images\location-sign-svgrepo-com.svg" alt="" height="22px"> Jabalpur, Madhya Pradesh</span></h2>
+          <h2>
+            <span><a href="https://www.instagram.com/teffino_express?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src=".\static\images\instagram.svg" alt="" class="bg-transparent"></a></span> 
+            <span><a href="https://www.facebook.com/people/teffinoexpress/61560848874552/?mibextid=ZbWKwL"><img src=".\static\images\facebook.svg" alt="" class="bg-transparent"></a></span> 
+            <span><a href="https://api.whatsapp.com/send?phone=9424067977&text=Welcome to Teffino."><img src=".\static\images\whatsapp.svg" alt="" class="bg-transparent"></a></span> 
+            <span><a href="https://x.com/TeffinoE5234"><img src=".\static\images\twitter.svg" alt="" class="bg-transparent"></a></span>
+          </h2>
+        </div>
+      </div>
+      <div class="line-container">
+        <div class="line"></div>
+      </div>
+      <div class="copyright">
+        <img src=".\static\images\copyright.svg" alt="">
+        <h2>All Rights Reserved</h2>
+      </div>
+  </footer>
+    <script>
+        const btn1 = document.getElementById('btn-1');
+        const btn2 = document.getElementById('btn-2');
+        const content1 = document.getElementById('content-1');
+        const content2 = document.getElementById('content-2');
+    
+        btn1.addEventListener('click', function() {
+            content1.classList.add('active');
+            content2.classList.remove('active');
+            btn1.classList.add('active');
+            btn2.classList.remove('active');
+        });
+    
+        btn2.addEventListener('click', function() {
+            content1.classList.remove('active');
+            content2.classList.add('active');
+            btn1.classList.remove('active');
+            btn2.classList.add('active');
+        });
+
+        window.addEventListener('scroll', function() {
+  const topBar = document.querySelector('.top-bar');
+  const navbar = document.querySelector('.navbar');
+
+  if (window.pageYOffset > 0) {
+    topBar.classList.add('hide');
+    navbar.classList.add('show');
+  } else {
+    topBar.classList.remove('hide');
+    navbar.classList.remove('show');
+  }
+});
+    </script>
+</body>
+</html>

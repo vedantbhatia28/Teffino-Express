@@ -1,0 +1,258 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/AboutUs.css') }}">
+    <link rel="icon" type="image/x-icon" href=".\static\images\favicon.png">
+    <!-- <link rel="stylesheet" href="Trinity-main\static\css\AboutUs.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <title>Teffino_AboutUs</title>
+
+    <style>
+      .icon-bar {
+  position: fixed;
+  top: 45%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 60px; 
+}
+.icon-bar a i {
+  font-size: 30px !important; 
+}
+
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.google {
+  background: #dd4b39;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.instagram {
+  background: #bb0061f4;
+  color: white;
+}
+
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+.my-float{
+	margin-top:16px;
+}
+
+    </style>
+</head>
+<body>
+
+  <a href="https://api.whatsapp.com/send?phone=9424067977&text=Welcome to Teffino." class="float" target="_blank">
+    <i class="fa fa-whatsapp my-float"></i>
+    </a>
+  <div class="icon-bar">
+    <a href="https://www.facebook.com/people/teffinoexpress/61560848874552/?mibextid=ZbWKwL" class="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="https://x.com/TeffinoE5234" class="twitter"><i class="fa fa-twitter"></i></a>
+    <a href="mailto: teffinoexpress@gmail.com" class="google"><i class="fa fa-google"></i></a>
+    <a href="https://www.instagram.com/teffino_express?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="instagram"><i class="fa fa-instagram"></i></a>
+  </div>
+
+
+  <div class="top-bar">
+    <div class="top-bar-container">
+      <div class="logo-container">
+        <a href="./" class="site-logo">
+          <!-- <img src="{{ url_for('static', filename='images/logo-1@2x.png') }}" alt="#" height="100px" width="100px"> -->
+          <img src="{{ url_for('static', filename='images/logo-1@2x.png') }}" alt="#" height="100px" width="100px" style="margin-top: -20px;">
+
+        </a>
+      </div>
+
+      <div style="margin-top: -20px;" class="nav-container">
+        <ul class="nav-links">
+          <li><a href="./">Home</a></li>
+          <li><a href="./AboutUs">About Us</a></li>
+          <li><a href="./Meals">Meal Plans</a></li>
+          <li><a href="./Services">Services</a></li>
+          <li><a href="./Gallery">Gallery</a></li>
+          <li><a href="./ContactUs">Contact</a></li>
+        </ul>
+      </div>
+      <div class="subscribe-container">
+        <button style="margin-top: -20px;" class="subscribe-btn"> <i class="fa fa-phone" aria-hidden="true"></i>+91 9424067977</button>
+      </div>
+    </div>
+  </div>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="./" class="site-logos">
+        <!-- <img src="{{ url_for('static', filename='images/logo-1@2x.png') }}" alt="#" height="100px" width="100px"> -->
+        <img src="{{ url_for('static', filename='images/logo-1@2x.png') }}" alt="#" height="100px" width="100px" style="margin-top: -20px;">
+
+      </a>
+      <ul class="nav-links">
+        <li><a href="./">Home</a></li>
+        <li><a href="./AboutUs">About Us</a></li>
+        <li><a href="./Meals">Meal Plans</a></li>
+        <li><a href="./Services">Services</a></li>
+        <li><a href="./Gallery">Gallery</a></li>
+        <li><a href="./ContactUs">Contact</a></li>
+      </ul>
+      <div class="nav-sub subscribe-container">
+        <button style="margin-top: -20px;" class="subscribe-btn"> <i class="fa fa-phone" aria-hidden="true"></i>+91 9424067977</button>
+      </div>
+    </div>
+</nav>
+    <section class="about-us">
+        <div class="about-us-img">
+            <br>
+           <h1>About Us</h1>
+        </div>
+        <div class="quality">
+            <div class="quality-1">
+                <img src=".\static\images\vegetables-1@2x.png" alt="#" height="140px" width="140px">
+                <h2>100% Vegetarian Food</h2>
+            </div>
+            <div class="quality-1">
+                <img src=".\static\images\vegetables-1-1@2x.png" alt="#" height="140px" width="140px" >
+                <h2>Fresh & Quality Ingredients</h2>
+            </div>
+            <div class="quality-1">
+                <img src=".\static\images\hand-1@2x.png" alt="#" height="140px" width="140px">
+                <h2>Hygienically Prepared Food</h2>
+            </div>
+        </div>
+        <div class="spacer"></div>
+        <div class="main-content">
+            <img src=".\static\images\group-12@2x.png" alt="#" width="700px">
+            <div class="info-para">
+                <h3>
+                    <p> 
+                        Teffino Express is an online tiffin booking service,
+                        providing you with fresh home made food. With a wide range
+                        of varieties, we also offer you great taste.
+                    </p>
+                </h3>
+                <h3>
+                    <p>
+                        Our ace Chef with a robust experience & best Culinary
+                        Qualification in providing meals to match the taste buds
+                        healthily without burning a hole in the pocket.
+                    </p>
+                </h3>
+                <h3>
+                    <p>
+                        If you are searching for food which tastes like home away
+                    from home, there here we are to serve you with happiness and
+                    love. Hungry? then don’t wait anymore, order now and enjoy
+                    our meal options.
+                    </p>
+                </h3>
+            </div>
+        </div>
+        
+        
+    </section>
+    <footer class="footer">
+        <div class="footer-info">
+          <div class="company-info">
+            <a href="./">
+              <img src=".\static\images\logo-1@2x.png" alt="#" height="150px">
+            </a>
+           
+            <p>Teffino Express has been serving authentic Indian food and also provides you with freshly cooked healthy meals, made with love. Trust us and we won't disappoint you.</p>
+          </div>
+          <div class="useful-links">
+            <h1>Useful Links</h1>
+            <div class="links">
+              <ul class="links-1">
+                <li><a href="./">Home</a></li>
+                <li><a href="./AboutUs">About Us</a></li>
+                <li><a href="./Meals">Meal Plans</a></li>
+                <li><a href="./Services">Services</a></li>
+                <li><a href="./Gallery">Gallery</a></li>
+              </ul>
+              <ul class="links-1">
+                <li><a href="./FAQs" >FAQ</a></li>
+                <li>Privacy Policy</li>
+                <li>Terms &amp; Conditions</li>
+                <li><a href="./ContactUs">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="contact-info">
+            <h1>Contact Information</h1>
+            <h2><span><img src=".\static\images\icon-2.svg" alt=""></span> teffinoexpress@gmail.com</h2>
+            <h2><span><img src=".\static\images\icon--bootstrap--filled--telephone.svg" alt=""> +91 9424067977</span></h2>
+            <h2><span><img src=".\static\images\location-sign-svgrepo-com.svg" alt="" height="22px"> Jabalpur, Madhya Pradesh</span></h2>
+            <h2>
+              <span><a href="https://www.instagram.com/teffino_express?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src=".\static\images\instagram.svg" alt="" class="bg-transparent"></a></span> 
+              <span><a href="https://www.facebook.com/people/teffinoexpress/61560848874552/?mibextid=ZbWKwL"><img src=".\static\images\facebook.svg" alt="" class="bg-transparent"></a></span> 
+              <span><a href="https://api.whatsapp.com/send?phone=9424067977&text=Welcome to Teffino."><img src=".\static\images\whatsapp.svg" alt="" class="bg-transparent"></a></span> 
+              <span><a href="https://x.com/TeffinoE5234"><img src=".\static\images\twitter.svg" alt="" class="bg-transparent"></a></span>
+            </h2>
+          </div>
+        </div>
+        <div class="line-container">
+          <div class="line"></div>
+        </div>
+        <div class="copyright">
+          <img src=".\static\images\copyright.svg" alt="#">
+          <h2>All Rights Reserved</h2>
+        </div>
+    </footer>
+    <script>
+    window.addEventListener('scroll', function() {
+    const topBar = document.querySelector('.top-bar');
+    const navbar = document.querySelector('.navbar');
+  
+    if (window.pageYOffset > 0) {
+      topBar.classList.add('hide');
+      navbar.classList.add('show');
+    } else {
+      topBar.classList.remove('hide');
+      navbar.classList.remove('show');
+    }
+  });
+    </script>
+</body>
+</html>

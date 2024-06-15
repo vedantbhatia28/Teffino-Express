@@ -1,0 +1,145 @@
+.FAQ{
+    margin:0 auto;
+    height: 700px;
+    padding:40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+h1{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+}
+.main-point{
+    text-align: left;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    line-height: normal;
+}
+
+.return{
+    position: absolute; 
+    height: 60px;
+    width: 60px;
+    border-radius: 50% ;
+    border: none;
+    font-size: 40px;
+    top:20%;
+    left:90%;
+    cursor: pointer;
+}
+.FAQ {
+    margin: 0 auto;
+    height: 700px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.main-point {
+    text-align: left;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    line-height: normal;
+}
+
+.return {
+    position: absolute; 
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: none;
+    font-size: 40px;
+    top: 20%;
+    left: 90%;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .FAQ {
+        height: auto;
+        min-height: 600px;
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .main-point {
+        font-size: 18px;
+        gap: 15px;
+    }
+
+    .return {
+        height: 50px;
+        width: 50px;
+        font-size: 30px;
+        top: 5%;
+        left: 85%;
+    }
+}
+
+@media (max-width: 480px) {
+    .FAQ {
+        min-height: 500px;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .main-point {
+        font-size: 16px;
+        gap: 12px;
+    }
+
+    .return {
+        height: 40px;
+        width: 40px;
+        font-size: 24px;
+        top: 5%;
+        left: 80%;
+    }
+}
+
+@media (max-width: 450px) {
+    .FAQ {
+        min-height: 450px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .main-point {
+        font-size: 14px;
+        gap: 10px;
+    }
+
+    .return {
+        height: 35px;
+        width: 35px;
+        font-size: 20px;
+        top: 5%;
+        left: 90%;
+    }
+}

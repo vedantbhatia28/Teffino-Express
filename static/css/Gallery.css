@@ -1,0 +1,579 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedan+SC&display=swap');
+  *{
+      margin:0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Sedan SC", serif;
+  }
+  .top-bar {
+    height: 100px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+  }
+
+  .top-bar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .logo-container .site-logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+
+  .subscribe-btn {
+    background-color: #333;
+    color: #0b0000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 24px;
+    background-color: #f9ba1f;
+  }
+
+  .subscribe-btn:hover {
+    background-color: hsl(43, 95%, 45%);
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: 1px solid rgb(236, 161, 48);
+    color: #000;
+    padding: 10px;
+    z-index: 999;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    background-color: #fbf6ee;
+    padding: 20px;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .navbar.show {
+    transform: translateY(0);
+  }
+
+  .nav-container {
+    display: flex;
+    height: 38px;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 24px;
+    padding: 0;
+  }
+
+  .nav-links li {
+    margin-left: 20px;
+  }
+
+  .nav-links li a {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .top-bar.hide {
+    transform: translateY(-100%);
+  }
+
+  .spacer{
+    height: 140px;
+  }
+  .game-board {
+      
+      display: grid;
+    
+    
+      margin: 0 auto;
+      padding:20px;
+      grid-template-rows: 300px 300px 300px;
+      grid-template-columns: 300px 300px 300px;
+      gap:60px
+    }
+    
+    .box {
+      border: 1px solid #555;
+      object-fit: cover;
+      object-position: 53% 50%;
+      height: 300px;
+      border-radius: 15px;
+    
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #AAA;
+      transition: 0.5s;
+      box-shadow: 5px 5px 5px  black;
+      aspect-ratio: 1 / 1;
+      perspective: 800px; /* Add perspective */
+      
+      }
+    
+      
+    .box:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5); /* Add inset box-shadow */
+        border-radius: 10px;
+        z-index: -1; /* Ensure the pseudo-element is behind the box content */
+      }
+    .box:hover{
+      transform: scale(1.15);
+      cursor: pointer;
+    }
+    .main {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      
+      /* Add this line */
+    }
+    
+    
+  .footer {
+    background-color: #f9ba1f;
+    width: 100%;
+    border-radius: 50px 50px 0 0;
+    padding: 50px;
+    box-sizing: border-box;
+  }
+
+  .footer-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .company-info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+    width: 400px;
+    font-size: 25px;
+    text-align: left;
+    letter-spacing: normal;
+  }
+  .company-info a{
+    cursor: pointer;
+  }
+
+  .useful-links h1,
+  .contact-info h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .links {
+    display: flex;
+    gap: 80px;
+    font-size: 25px;
+    
+  }
+
+  .links-1 {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+  }
+  .links-1 a{
+    color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .line-container {
+    margin-top: 10px;
+    padding: 20px 0;
+  }
+
+  .line {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+  }
+
+  .copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+  }
+
+  @media (max-width: 1024px) {
+    .footer {
+      height: auto;
+      padding: 30px;
+    }
+
+    .footer-info {
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .company-info,
+    .useful-links,
+    .contact-info {
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .links {
+      justify-content: center;
+    }
+  }
+  @media (min-width:1000px){
+    .site-logos{
+      display: none;
+    }
+    .nav-sub{
+      display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .top-bar {
+      display: none;
+    }
+    
+    .navbar {
+      position: static;
+      transform: none;
+      border: none;
+      border-radius: 0;
+      background-color: #fbf6ee;
+      padding: 20px 0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar.show {
+      transform: none;
+    }
+
+    .nav-container {
+      height: auto;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-logo {
+      display: block;
+    }
+
+    .nav-links {
+      flex-direction: column;
+      gap: 0;
+      font-size: 20px;
+      padding: 0;
+    }
+
+    .nav-links li {
+      width: 100%;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .nav-links li:last-child {
+      border-bottom: none;
+    }
+
+    .nav-links li a {
+      display: block;
+      padding: 15px 20px;
+      text-align: center;
+    }
+
+    .nav-links li a:hover {
+      background-color: #f0e6d2;
+    }
+
+    .nav-phone {
+      display: block;
+      text-align: center;
+      padding: 15px 0;
+    }
+
+    .about-us {
+      margin-top: 0;
+    }
+
+    .about-us-img {
+      height: 400px;
+      font-size: 32px;
+    }
+
+    .quality {
+      width: 100%;
+      height: auto;
+      position: static;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 20px;
+    }
+
+    .quality-1 {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      margin-bottom: 30px;
+    }
+
+    .spacer {
+      height: 50px;
+    }
+
+    .main-content {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+
+    .main-content-image {
+      max-width: 100%;
+      order: -1; /* Makes the image come first */
+    }
+
+    .info-para {
+      gap: 40px;
+      padding: 15px;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .footer {
+      margin-top: 30px;
+      padding: 30px 15px;
+    }
+
+    .footer-info {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .company-info,
+    .useful-links,
+    .contact-info {
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+      align-items: center;
+    }
+
+    .links {
+      justify-content: center;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .game-board {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(9, 250px);
+      gap: 30px;
+      padding: 15px;
+    }
+  
+    .box {
+      height: 250px;
+      max-width: 250px;
+      margin: 0 auto;
+    }
+  }
+
+
+  @media (max-width: 480px) {
+    .logo-container{
+      display: flex;
+    }
+    .navbar {
+      padding: 15px 0;
+    }
+
+    .nav-links {
+      font-size: 18px;
+    }
+
+    .nav-links li a {
+      padding: 12px 15px;
+    }
+
+    .about-us-img {
+      height: 300px;
+      font-size: 28px;
+    }
+
+    .quality-1 {
+      max-width: 250px;
+      font-size: 20px;
+    }
+
+    .spacer {
+      height: 30px;
+    }
+
+    .main-content {
+      margin: 30px auto;
+      padding: 15px;
+    }
+    .main-content img{
+      width:380px ;
+      overflow-x: hidden;
+
+
+
+    }
+
+    .info-para {
+      gap: 30px;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    .footer {
+      margin-top:40px;
+      padding: 20px;
+      
+    }
+    .company-info,
+    .useful-links,
+    .contact-info {
+      max-width: 300px;
+    }
+
+    .company-info,
+    .useful-links h1,
+    .contact-info h1 {
+      font-size: 20px;
+    }
+
+    .links {
+      gap: 60px;
+      font-size: 20px;
+    }
+
+    .links-1 {
+      gap: 15px;
+    }
+    .game-board {
+      grid-template-rows: repeat(9, 200px);
+      gap: 25px;
+      padding: 10px;
+    }
+  
+    .box {
+      height: 200px;
+      max-width: 200px;
+    }
+  }
+
+  @media (max-width: 450px) {
+    
+    .logo-container{
+      display: flex;
+    }
+    .navbar {
+      width: 100%; /* Make navbar cover entire screen */
+      padding-top: 80px; /* Adjust as needed */
+      padding-bottom: 20px; /* Add padding at the bottom */
+      
+
+    }
+
+    .nav-logo {
+      display: block;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .nav-logo img {
+      max-width: 150px; /* Adjust size as needed */
+    }
+  
+
+    .nav-container {
+      padding: 0 20px;
+      margin:10px;
+      display: flex;
+      flex-direction: column;
+      gap:20px;
+    }
+
+    .nav-links {
+      flex-direction: column;
+      gap: 15px;
+      text-align: center;
+    }
+
+    .nav-links li {
+      width: 100%;
+      border-bottom: none;
+    }
+
+    .nav-links li a {
+      padding: 12px 0;
+    }
+    .game-board {
+      grid-template-rows: repeat(9, 180px);
+      gap: 40px;
+    }
+  
+    .box {
+      height: 180px;
+      max-width: 180px;
+    }
+    .nav-links{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .links{
+      display: flex;
+      flex-direction: row;
+    }
+  }
