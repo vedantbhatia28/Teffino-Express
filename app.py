@@ -64,5 +64,5 @@ def contactForm():
         # Whatsapp_link = "https://wa.me/+918770053222?"
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':
+    app.run()
