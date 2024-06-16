@@ -660,7 +660,7 @@ cursor: pointer;
   }
   .select-option {
     position: absolute;
-    top:50%;
+    top:70%;
     min-height: 350px;
     gap: 25px;
     padding: 10px;
